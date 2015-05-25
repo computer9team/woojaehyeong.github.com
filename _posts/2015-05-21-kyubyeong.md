@@ -11,3 +11,5 @@
 
 동영상 되나?
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DXTtv2ZfLzQ" frameborder="0" allowfullscreen></iframe>
+
+<embed src="http://www.youtube.com/v/H8Z0z9JV__I?version=3&amp;hl=ko_KR" type="application/x-shockwave-flash" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed>
