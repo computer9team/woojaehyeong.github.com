@@ -24,3 +24,5 @@
 
 뭐냐
 <div><object width="560" height="315"><param name="movie" value="https://www.youtube.com/v/57fplCLd2cY?version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="https://www.youtube.com/v/57fplCLd2cY?version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object></div><p><a href="http://nuridol.net/ut_convert.html">NuRi's Tools - YouTube 변환기</a></p>
+
+<embed height="360" type="application/x-shockwave-flash" width="640" src="http://www.youtube.com/v/MXod-yANIHQ?version=2&amp;autoplay=1&amp;loop=1" allowscriptaccess="never" allownetworking="internal"></embed>
