@@ -2,22 +2,1317 @@
 layout: default
 ---
 
-<div class="home">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <title> Architekt Theme | Architect Theme WordPress | Architecture</title>          
+  <link rel="stylesheet" href="http://www.dessign.net/architekttheme/wp-content/themes/architekttheme/style.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->          
+  <link rel='stylesheet' id='contact-form-7-css'  href='http://www.dessign.net/architekttheme/wp-content/plugins/contact-form-7/styles.css?ver=3.0.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.dessign.net/architekttheme/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://www.dessign.net/architekttheme/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.dessign.net/architekttheme/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.dessign.net/architekttheme/wp-includes/wlwmanifest.xml" /> 
 
-  <h1 class="page-heading">Posts</h1>
+<script type="text/javascript">
+//<![CDATA[
+var _wpcf7 = { cached: 1 };
+//]]>
+</script>
+<script type="text/javascript">
+(function(url){
+if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+var wfscr = document.createElement('script');
+wfscr.type = 'text/javascript';
+wfscr.async = true;
+wfscr.src = url + '&r=' + Math.random();
+(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+})('//www.dessign.net/architekttheme/wp-admin/admin-ajax.php?action=wordfence_logHuman&hid=C77EC3DB79F0E40E62ABC9650A8131BC'); 
+</script>  
+  <link rel="stylesheet" href="http://www.dessign.net/architekttheme/wp-content/themes/architekttheme/themes/default/default.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="http://www.dessign.net/architekttheme/wp-content/themes/architekttheme/css/nivo-slider.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="http://www.dessign.net/architekttheme/wp-content/themes/architekttheme/js/jquery-1.6.1.min.js"></script>
+  <script type="text/javascript" src="http://www.dessign.net/architekttheme/wp-content/themes/architekttheme/js/jquery.nivo.slider.js"></script>  
+  <script type="text/javascript" src="http://www.dessign.net/architekttheme/wp-content/themes/architekttheme/js/scripts.js"></script>
+  
+  <script type="text/javascript">
+/*  $(window).load(function() {
+      $('#slider').nivoSlider({
+      pauseTime: '5000',
+      controlNav: false
+      });
+  });*/
+  </script>    
+  
+  
+  <script type="text/javascript">
+    var intervalID;
+    
+    function slideSwitch() {
+        var $active = $('#slideshow a.active');
+    
+        if ( $active.length == 0 ) $active = $('#slideshow a:last');
+    
+        var $next =  $active.next().length ? $active.next()
+            : $('#slideshow a:first');
+    
+        $active.addClass('last-active');
+    
+        $next.css({opacity: 0.0})
+            .addClass('active')
+            .animate({opacity: 1.0}, 1000, function() {
+                $active.removeClass('active last-active');
+            });
+        clearInterval(intervalID);
+        intervalID = setInterval( "slideSwitch()", 5000 );
+    }
+    
+    function slideSwitch_prev() {
+        var $active = $('#slideshow a.active');
+    
+        if ( $active.length == 0 ) $active = $('#slideshow a:first');
+    
+        var $next =  $active.prev().length ? $active.prev() : $('#slideshow a:last');
+    
+        $active.addClass('last-active');
+    
+        $next.css({opacity: 0.0})
+            .addClass('active')
+            .animate({opacity: 1.0}, 1000, function() {
+                $active.removeClass('active last-active');
+            });
+        clearInterval(intervalID);
+        intervalID = setInterval( "slideSwitch()", 5000 );
+    }    
+    
+    $(function() {
+        intervalID = setInterval( "slideSwitch()", 5000 );
+	$('.slide_prev_new').click(function() {
+		slideSwitch_prev();
+		clearInterval(intervalID);
+		intervalID = setInterval( "slideSwitch()", 5000 );
+	});
+	
+	$('.slide_next_new').click(function() {
+		slideSwitch();
+		clearInterval(intervalID);
+		intervalID = setInterval( "slideSwitch()", 5000 );	
+	});
+    });    
+  </script>            
+</head>
+<body>
+        <style type="text/css">
+      body { background-color: #FFFFFF; }
+    </style>
+    <div id="outside_container">
+  <div id="main_container">
+    
+    <div id="header">
+      <div class="header_top_text">Architekt Free WordPress Theme is clean simple and unique. Design to showcase your architectural portfolio</div>
+      
+              <a href="http://www.dessign.net/architekttheme"><img src="http://www.dessign.net/architekttheme/wp-content/uploads/logo.jpg" class="logo" /></a>
+            
+      <div class="header_text_cont">
+        Welcome to our online portfolio, we are small group of passionate designers and architects, looking to change and create amazing digital images to inspire others to follow in our innovative steps. Free Architect WordPress Theme      </div><!--//header_text_cont-->
+      
+      <div class="clear"></div>
+    </div><!--//header-->
+    
+    <div id="menu_container">
+      <ul id="menu" class="menu"><li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-44"><a href="http://www.dessign.net/architekttheme">HOME</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="http://www.dessign.net/architekttheme/about/">ABOUT</a></li>
+<li id="menu-item-187" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-187"><a href="#">PORTFOLIO</a>
+<ul class="sub-menu">
+	<li id="menu-item-188" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-188"><a href="http://www.dessign.net/architekttheme/category/commercial/">COMMERCIAL</a></li>
+	<li id="menu-item-189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-189"><a href="http://www.dessign.net/architekttheme/category/exhibition/">EXHIBITION</a></li>
+	<li id="menu-item-190" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-190"><a href="http://www.dessign.net/architekttheme/category/planning/">PLANNING</a></li>
+</ul>
+</li>
+<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="http://www.dessign.net/architekttheme/blog/">BLOG</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="http://www.dessign.net/architekttheme/resume/">RESUME</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="http://www.dessign.net/architekttheme/contact/">CONTACT</a></li>
+<li id="menu-item-153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153"><a href="http://www.dessign.net/architekt-theme/">BUY NOW</a></li>
+</ul><!--      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">PROFILE</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">RESUME</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>-->
+      
+      <div class="header_search">
+        <form role="search" method="get" id="searchform" action="http://www.dessign.net/architekttheme/">
+        <input type="text" value="" name="s" id="s" />
+        <INPUT TYPE="image" SRC="http://www.dessign.net/architekttheme/wp-content/themes/architekttheme/images/search-icon.png" class="search_icon" BORDER="0" ALT="Submit Form">
+        </form>
+      </div><!--//header_search-->
+      <div class="clear"></div>
+    </div><!--//menu_container-->
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+
+
+
+
+
+
+
+
+
+
+    <div id="slider_container">
+
+
+
+
+
+
+
+	<img src="http://www.dessign.net/architekttheme/wp-content/themes/architekttheme/images/prev-arrow.png" class="slide_prev_new" />
+
+	<img src="http://www.dessign.net/architekttheme/wp-content/themes/architekttheme/images/next-arrow.png" class="slide_next_new" />
+
+
+
+
+
+
+
+          <div id="slideshow">
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          <a href="http://www.dessign.net/architekttheme/mountain-hill-cabin-www-fantasticnorway-no/" class="active"><img width="959" height="349" src="http://www.dessign.net/architekttheme/wp-content/uploads/architekt-fantastic-horway-959x3491.jpg" class="slide_img wp-post-image" alt="" title="" /></a>
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+	
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          <a href="http://www.dessign.net/architekttheme/stimen-tourist-www-fantasticnorway-no/"><img width="959" height="349" src="http://www.dessign.net/architekttheme/wp-content/uploads/fantastic-norway-cabin-959x349.jpg" class="slide_img wp-post-image" alt="" title="" /></a>
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+	
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          <a href="http://www.dessign.net/architekttheme/sirene-www-fantasticnorway-no/"><img width="959" height="349" src="http://www.dessign.net/architekttheme/wp-content/uploads/architekt21-959x349.jpg" class="slide_img wp-post-image" alt="" title="" /></a>
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+	
+          
+
+
+
+
+
+
+          
+
+
+
+
+
+
+                    
+
+
+
+
+
+
+
+<!--            <img src="/images/slide-image.png" />
+
+
+
+
+
+
+
+            <img src="/images/slide-image.png" />
+
+
+
+
+
+
+
+            <img src="/images/slide-image.png" />-->
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+    </div><!--//slider_container-->            
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    <div class="home_blog_box">
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+      <a href="http://www.dessign.net/architekttheme/mountain-hill-cabin-winter-www-fantasticnorway-no/"><img width="306" height="215" src="http://www.dessign.net/architekttheme/wp-content/uploads/Mountain_Cabin-blog1-306x215.jpg" class="attachment-featured-blog wp-post-image" alt="Mountain_Cabin-blog" /></a>
+
+
+
+
+
+
+
+      <h3><a href="http://www.dessign.net/architekttheme/mountain-hill-cabin-winter-www-fantasticnorway-no/">Mountain Hill Cabin Winter &#8211; www.fantasticnorway.no</a></h3>
+
+
+
+
+
+
+
+    </div><!--//home_blog_box-->    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    <div class="home_blog_box home_second_blog_box">
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+      <a href="http://www.dessign.net/architekttheme/kneisen-visitors-center-www-fantasticnorway-no/"><img width="306" height="215" src="http://www.dessign.net/architekttheme/wp-content/uploads/keinser-logo-306x215.jpg" class="attachment-featured-blog wp-post-image" alt="keinser-logo" /></a>
+
+
+
+
+
+
+
+      <h3><a href="http://www.dessign.net/architekttheme/kneisen-visitors-center-www-fantasticnorway-no/">Kneisen Visitors Center &#8211; www.fantasticnorway.no</a></h3>
+
+
+
+
+
+
+
+    </div><!--//home_blog_box-->    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    <div class="home_blog_box home_blog_box_last">
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+      <a href="http://www.dessign.net/architekttheme/bronnoy-kunstbase-www-fantasticnorway-no/"><img width="306" height="215" src="http://www.dessign.net/architekttheme/wp-content/uploads/Base-of-Bronnoysund-logo-306x215.jpg" class="attachment-featured-blog wp-post-image" alt="Base-of-Bronnoysund-logo" /></a>
+
+
+
+
+
+
+
+      <h3><a href="http://www.dessign.net/architekttheme/bronnoy-kunstbase-www-fantasticnorway-no/">Bronnoy Kunstbase &#8211; www.fantasticnorway.no</a></h3>
+
+
+
+
+
+
+
+    </div><!--//home_blog_box-->    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    <div class="clear"></div>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    <div class="home_port_cont">
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+      <div class="home_port_box">
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+        <a href="http://www.dessign.net/architekttheme/house-of-families-www-fantasticnorway-no/"><img width="306" height="387" src="http://www.dessign.net/architekttheme/wp-content/uploads/house-of-families-front.jpg" class="attachment-featured-portfolio wp-post-image" alt="house-of-families-front" /></a>
+
+
+
+
+
+
+
+		 <h3><a href="http://www.dessign.net/architekttheme/house-of-families-www-fantasticnorway-no/">House of Families &#8211; www.fantasticnorway.no</a></h3>
+
+
+
+
+
+
+
+      </div><!--//home_port_box-->
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+      <div class="home_port_box home_second_port_box">      
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+        <a href="http://www.dessign.net/architekttheme/cabin-vardehaugen-www-fantasticnorway-no/"><img width="306" height="387" src="http://www.dessign.net/architekttheme/wp-content/uploads/Vardehaugen-306x3871.jpg" class="attachment-featured-portfolio wp-post-image" alt="Vardehaugen-306x387" /></a>
+
+
+
+
+
+
+
+		 <h3><a href="http://www.dessign.net/architekttheme/cabin-vardehaugen-www-fantasticnorway-no/">Cabin Vardehaugen &#8211; www.fantasticnorway.no</a></h3>
+
+
+
+
+
+
+
+      </div><!--//home_port_box-->
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+      <div class="home_port_box home_port_box_last">
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+        <a href="http://www.dessign.net/architekttheme/arkitekton-sculpture-www-fantasticnorway-no/"><img width="306" height="387" src="http://www.dessign.net/architekttheme/wp-content/uploads/arkitekton2-306x3871.jpg" class="attachment-featured-portfolio wp-post-image" alt="arkitekton2-306x387" /></a>
+
+
+
+
+
+
+
+		 <h3><a href="http://www.dessign.net/architekttheme/arkitekton-sculpture-www-fantasticnorway-no/">Arkitekton Sculpture &#8211; www.fantasticnorway.no</a></h3>
+
+
+
+
+
+
+
+      </div><!--//home_port_box-->
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+      <div class="clear"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+      <div class="clear"></div>      
+
+
+
+
+
+
+
+    </div><!--//home_port_cont-->
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    <div class="footer_box_cont">
+    
+      <div class="footer_box"><h3>SOCIAL LINKS</h3>
+
+
+
+
+        <ul>
+
+
+
+
+
+          
+
+
+
+
+          <li><a href="http://www.facebook.com/DessignNet">Facebook</a></li>
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+
+
+
+          
+
+
+
+
+          <li><a href="http://twitter.com/dessignnet">Twitter</a></li>
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+
+
+
+          
+
+
+
+
+          <li><a href="http://dessign.tumblr.com/">Tumblr</a></li>          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+
+
+
+          
+
+
+
+
+          <li><a href="http://dribbble.com/dessign">Dribbble</a></li>
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+
+
+
+          
+
+
+
+
+          <li><a href="http://forrst.me/dessign">Forrst</a></li>
+
+
+
+
+
+          
+
+
+
+
+        </ul>
+
+
+
+
+
+        </div>      
+      <div class="footer_box"><h3>BLOG</h3><ul>        
+
+
+
+
+
+          <li><a href="http://www.dessign.net/architekttheme/mountain-hill-cabin-winter-www-fantasticnorway-no/">Mountain Hill Cabin Winter &#8211; www.fantasticnorway.no</a></li>
+
+
+
+
+
+                
+
+
+
+
+
+          <li><a href="http://www.dessign.net/architekttheme/kneisen-visitors-center-www-fantasticnorway-no/">Kneisen Visitors Center &#8211; www.fantasticnorway.no</a></li>
+
+
+
+
+
+                
+
+
+
+
+
+          <li><a href="http://www.dessign.net/architekttheme/bronnoy-kunstbase-www-fantasticnorway-no/">Bronnoy Kunstbase &#8211; www.fantasticnorway.no</a></li>
+
+
+
+
+
+                
+
+
+
+
+
+          <li><a href="http://www.dessign.net/architekttheme/sirene-luxurious/">Sirene Luxurious &#8211; www.fantasticnorway.no</a></li>
+
+
+
+
+
+        
+
+
+
+
+        </ul></div>      
+      <div class="footer_box"><h3>ABOUT ARCHITEKT</h3>			<div class="textwidget">We are small group of passionate designers and architects, looking to change and create amazing digital images to inspire others to follow in our innovative steps. </div>
+		</div>      
+      <div class="footer_box footer_box_last"><h3>CONTACT</h3>
+
+
+
+
+        <ul>
+
+
+
+
+
+          <li>Marios Lublinski</li>
+
+
+
+
+
+          <li>Tel: 1-800-111-2233</li>
+
+
+
+
+
+          <li>Fax: 1-800-111-2244</li>
+
+
+
+
+
+          <li>marios@dessign.net</li>
+
+
+
+
+
+        </ul>
+
+
+
+
+
+        </div>      
+      <div class="clear"></div>
+      
+    </div><!--//footer_box_cont-->
+    
+  </div><!--//main_container-->
+  
+  <div id="footer"> Copyright 2015. All Rights Reserved. Design & Developed by <a href="http://www.dessign.net">Dessign.net</a> 
+  
+</div><!--//outside_container-->
+<script type='text/javascript' src='http://www.dessign.net/architekttheme/wp-content/plugins/contact-form-7/jquery.form.js?ver=2.52'></script>
+<script type='text/javascript' src='http://www.dessign.net/architekttheme/wp-content/plugins/contact-form-7/scripts.js?ver=3.0.1'></script>
+</body>
+</html>    
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+
+ Served from: www.dessign.net @ 2015-05-24 06:55:18 by W3 Total Cache -->
