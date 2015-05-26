@@ -1,477 +1,351 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	
-	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" width="device-width, initial-scale=1.0">
-	<meta name="description" content="A beginner's guide to creating a personal website and blog using Jekyll and hosting it for free using GitHub Pages.">
-	<meta name="author" content="Jonathan McGlone">
-	<!-- favicon
-	<link rel="shortcut icon" href="/img/ico/favicon.png">
-	-->
-	<title>A Guide to Creating and Hosting a Personal Website on GitHub | Jonathan McGlone | Librarian, Front-End Developer, Digital Publisher, Project Manager, Music Enthusiast, Web Noodler.</title>		
-	<!-- styles -->
-	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/jumbotron-narrow.css" rel="stylesheet">
-	<link href="/css/style.css" rel="stylesheet">
-	
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-  <script src="../../assets/js/html5shiv.js"></script>
-  <script src="../../assets/js/respond.min.js"></script>
-	<![endif]-->
-	<!-- google analytics - i will not share this data with google -->
-			<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<head>
 
-		  ga('create', 'UA-38506466-1', 'jmcglone.com');
-		  ga('send', 'pageview');
+  <meta charset="utf=8"></meta>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 
-		</script>	
+  <title>#dogfeet - GitHub의 페이지 기능 이용하기</title>
+  <meta name="description"
+  content="GitHub의 Pages 기능을 이용하는 방법에 대해 정리해보고자 한다. @pismute님의 &#39;한 때 버전 컨트롤, 위키, 블로그를 다 따로 사용했었는데, GitHub를 알고 나서 Git, GitHub으로만 사용하고 있다&#39;는 말을 듣고 블로깅을 GitHub로 해보면 어떨까 하는 생각이 들었다. GitHub의 Page 기능을 이용하면 이 블로그처럼 글을 써서 남길 수 있다."></meta>
+  <meta name="keywords"
+    content="github,git,pages,blog"></meta>
+  <meta name="author"
+    content="Yongjae Choi"></meta>
+
+  <link rel="shortcut icon" href="images/favicon.ico"></link>
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png"></link>
+  <link rel="apple-touch-icon" sizes="72x72"
+    href=" ='images/apple-touch-icon-72x72.png"></link>
+  <link rel="apple-touch-icon" sizes="114x114"
+    href="images/apple-touch-icon-114x114.png"></link>
+  <link rel="alternate" type="application/atom+xml"
+    title="GitHub의 페이지 기능 이용하기 &raquo; Feed"
+    href="http://feeds.feedburner.com/github/dogfeet"></link>
+
+  <link rel="stylesheet" media="screen, projection"
+    href="/bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" media="screen, projection"
+    href="/styles/pygment-github.css"></link>
+  <link rel="stylesheet" media="screen, projection"
+    href="/styles/style.css"></link>
+
 </head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">dogfeet</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/site/archive.html">Archive</a></li>
+          <li><a href="/site/keyword-map.html">Keyword Map</a></li>
+        </ul>
+        <form id="search-form" class="navbar-form navbar-right" action="http://google.com/search" method="get">
+          <input type="hidden" name="q" value="site:dogfeet.github.io"></input>
+          <input class="form-control" type="text" name="q" results="0" placeholder="Search..."></input>
+        </form>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div class="container">
+    <div>
+      <link rel="stylesheet" media="screen, projection"
+  href="/styles/github.css"></link>
+<link rel="stylesheet" media="screen, projection"
+  href="/styles/markdown.css"></link>
 
-	
-	<body>
-		<div class="container">
-			
-			<div class="header">
-	<ul class="nav nav-pills pull-right">
-		<li class=""><a href="/cv" title="CV">CV</a></li>
-		<!-- <li class=""><a href="/projects" title="Projects">Projects</a></li> -->
-		<li class=""><a href="/notes" title="Notes">Notes</a></li>
-		<li class=""><a href="/contact" title="Contact">Contact</a></li>
-	</ul>
-	<h3 class="text-muted"><a href="/">Jonathan McGlone</a></h3>
-</div> <!-- /header -->
-			
-			<div class="guide">
-  <div class="title">
-  <h1>Creating and Hosting a Personal Site on GitHub</h1>
-  <p>A step-by-step beginner's guide to creating a personal website and blog using Jekyll and hosting it for free using GitHub Pages.</p>
-   <p><a href="http://hankquinlan.github.io" class="btn btn-primary btn-md" role="button">View Demo Site</a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/hankquinlan/hankquinlan.github.io/archive/master.zip" class="btn btn-primary btn-md" role="button">Download Demo Files</a></p>
-	</div>
-  <p>This guide is meant to help Git and GitHub beginners get up and running with <a href="https://pages.github.com/">GitHub Pages</a> and <a href="http://jekyllrb.com/">Jekyll</a> in an afternoon. It assumes you know very little about version control, Git, and GitHub. It is helpful if you know the basics of HTML and CSS since we'll be working directly with these languages. We'll also be using a little bit of <a href="https://daringfireball.net/projects/markdown/">Markdown</a>, but by no means do you need to be an expert with any of these languages. The idea is to learn by doing, so the code we'll be implementing in this tutorial is available in this guide or can be downloaded entirely at <a href="https://github.com/hankquinlan/hankquinlan.github.io/archive/master.zip">this GitHub repo</a>. Feel free to copy and paste or type this code directly into your project's files.</p>
+<section class="content">
+  <article id="post" class="row post " typeof="sioc:post" about="/articles/2012/github-pages.html" lang="ko-kr">
+    <div class="col-sm-2 small-font">
+      <br /><br />
+      <p property="dc:created">2012 Oct 10</p>
+      <p class="small-font top-line"> - by<br /><a href="https://lnyarl.github.io">Yongjae Choi</a></p>
+      <div id="social-buttons" class="top-line">
+        <ul class="unstyled">
+          <li><a class="twitter-share-button" href="https://twitter.com/share"
+            data-url="http://dogfeet.github.io/articles/2012/github-pages.html" data-via="lnyarl"
+            data-count="horizontal" data-lang="en">Tweet</a></li>
+          <li><div class="g-plusone" data-size="medium" data-href="http://dogfeet.github.io/articles/2012/github-pages.html"></div></li>
+          <li><div class="fb-like"
+            data-href="http://dogfeet.github.io/articles/2012/github-pages.html" data-send="false"
+            data-layout="button_count" data-show-faces="false"></div></li>
+        </ul>
+      </div>
 
-<p>For a little background on <em>why</em> I chose GitHub and GitHub Pages for my personal website (and other projects), see <a href="/notes/2014/05/03/using-github-to-create-and-host-a-personal-website/">this note</a>.</p>
+      <p class="small-font top-line"><a href="/site/keyword-map.html#github" class="keyword">github</a> <a href="/site/keyword-map.html#git" class="keyword">git</a> <a href="/site/keyword-map.html#pages" class="keyword">pages</a> <a href="/site/keyword-map.html#blog" class="keyword">blog</a></p>
+    </div>
 
-<h2>Other Resources You Should Know</h2>
-  <p>In order to make GitHub Pages accessible to a wider audience, this guide focuses on using the web interface on github.com to build your personal website, thereby generalizing and glossing over the standard tools associated with Git and GitHub. To get a lot dirtier wit Git and GitHub (ie, the command line and terminal), there are several other great guides you should also know about, probably bookmark, and read after completing this one, or jump over to if that is more your speed: <a href="http://24ways.org/2013/get-started-with-github-pages/" title="Get Started with GitHub Pages by Anna Debenham">Anna Debenham</a>, <a href="http://www.thinkful.com/learn/a-guide-to-using-github-pages/" title="A Guide To Using GitHub Pages by Thinkful">Thinkful</a>, and even <a href="https://pages.github.com/" title="GitHub Pages">GitHub</a> itself go above and beyond making the command line or local workflow of GitHub hosting and Jekyll templates accessible to a wider audience.</p>
+    <div class="col-sm-10">
 
-<p>Also, at <a href="#resources">the end of this document</a>, there is a pretty good list of resources related to Git, GitHub/Pages, Jekyll, and Markdown that can help you dive deeper into these tools. I'll do my best to keep this list updated as I find new ones.</p> 
-
-<h2>What is Git, GitHub, and GitHub Pages?</h2>
-<p>Git, GitHub, and GitHub Pages are all very closely related. Imagine Git as the workflow to get things done and GitHub and GitHub Pages as places to store the work you finish. Projects that use Git are stored publicly in GitHub and GitHub Pages, so in a very generalized way, Git is what you do locally on your own computer and GitHub is the place where all this gets stored publicly on a server.</p>
-<h3>Git</h3>
-<p><a href="http://git-scm.com/">Git</a> is a version control system that tracks changes to files in a project over time. It typically records what the changes were (what was added? what was removed from the file?), who made the changes, notes and comments about the changes by the changer, and at what time the changes were made. It is primarily used for software development projects which are often collaborative, so in this sense, it is a tool to help enable and improve collaboration. However, its collaborative nature has led it to gain interest in the publishing community as a tool to help in both authoring and editorial workflows.</p>
-
-<p>Git is for people who want to maintain multiple versions of their files in an efficient manner and travel back in time to visit different versions without juggling numerous files along with their confusing names stored at different locations. Think of Git and version control like a magic undo button.</p>
-
-<p>In the diagram below, each stage represents a “save”. Without Git, you cannot go back to any of the in between stages from the initial draft and final draft. If you wanted to change the opening paragraph in the final draft, you’d have to delete data that you couldn’t recover. To work around this, we use the “save as” option, name it something different, delete the opening paragraph and start writing a new one.</p>
-
-<img class="img-responsive" src="/img/guides/git-basics.png"/>
-
-<p>With Git, the flow is multidirectional. Each change that is significant is marked as important in a version, and you proceed. If you you need to get back to earlier stages, you can without any loss of data. Presently, Google Docs “revision history” or Wikipedia’s “edit history” work in this sort of fashion. Git is just a lot more detailed and can get a lot more complex if needed.<sup><a href="#n1">1</a></sup></p>
-
-<p>When you have the chance, I <strong>highly recommend</strong> this <a href="https://try.github.io/levels/1/challenges/1">15 minute, hands-on web tutorial on using Git</a>.</p>
-
-<h3>GitHub</h3>
-<p>GitHub is a web hosting service for the source code of software and web development projects (or other text based projects) that use Git. In many cases, most of the code is publicly available, enabling developers to easily investigate, collaborate, download, use, improve, and remix that code. The container for the code of a specific project is called a repository.</p>
-
-<p>There are thousands of really cool and exciting repositories on GitHub, with new ones added every day. Some examples of popular software development projects that make their code available on GitHub include:</p>
+      <div property="sioc:content"><h1 id="github-">GitHub의 페이지 기능 이용하기</h1>
+<p>GitHub의 Pages 기능을 이용하는 방법에 대해 정리해보고자 한다. @pismute님의 &#39;한 때 버전 컨트롤, 위키, 블로그를 다 따로 사용했었는데, GitHub를 알고 나서 Git, GitHub으로만 사용하고 있다&#39;는 말을 듣고 블로깅을 GitHub로 해보면 어떨까 하는 생각이 들었다. GitHub의 Page 기능을 이용하면 이 블로그처럼 글을 써서 남길 수 있다.
+GitHub의 <a href="https://help.github.com/categories/20/articles">help 페이지에 있는 Pages의 글</a> 들중 몇 가지만 빼고 한국어로 옮겨봤다.</p>
+<p><img src="/articles/2012/github-pages/github-help.jpg" alt="help"></p>
+<h2 id="1-github-pages-">1. GitHub의 Pages란?</h2>
+<p>GitHub의 Pages란(이하 페이지) GitHub에서 무료로 호스팅하는 공개 웹페이지이다. GitHub에서 제공하는 페이지 제작 도구로 쉽게 페이지를 만들어 공개할 수도 있고, 로컬에서 git을 이용해 수동으로 만들 수도 있다.</p>
+<h2 id="2-">2. 사용자와 프로젝트를 위한 페이지</h2>
+<p>우리는 두 가지 타입의 페이지를 만들 수 있다. 사용자 페이지와 프로젝트 페이지가 그것이다. 이 둘은 몇 가지 사항을 빼고는 거의 똑같다. (역자주 : 원문에는 User, Organization and Project Page라고 나와있다. 하지만 User와 Organization을 나누는 것은 계정을 혼자 사용하느냐 여럿이서 사용하느냐에 따른 차이일 뿐이다. 사용 방법에는 아무런 차이가 없으므로 이 글에서는 뭉쳐서 사용자라고만 표기한다.)</p>
+<h3 id="-">사용자 페이지</h3>
+<p>사용자 페이지는 페이지만을 위한 특별한 저장소에 저장한다. 이 저장소의 이름은 계정 이름을 사용한다. 만약 계정이 dogfeet라면 이 조직을 위한 저장소의 이름은 <a href="https://github.com/dogfeet/dogfeet.github.io">dogfeet/dogfeet.github.io</a> 이 된다.</p>
 <ul>
-	<li><a href="https://github.com/twbs/bootstrap">Twitter Bootstrap</a>, an extremely popular front-end framework for mobile first websites, created by developers at Twitter.</li>
-	<li><a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>, a front-end template for quickly building websites, </li>
-	<li>The JavaScript Visualization Library <a href="https://github.com/mbostock/d3">D3</a></li>
-<li><a href="https://github.com/rails/rails">Ruby on Rails</a>, the open-source web framework built on Ruby.</li>
+<li>저장소의 이름은 반드시 <code>username/username.github.com</code>의 구조를 가진다.</li>
+<li><strong>master</strong> 브랜치의 내용이 곧 페이지에서 보이는 내용이다.</li>
 </ul>
-
-<p>Usually, people just host the files that contain their code, so what you see on the end view is the actual code, as in this example from the Ruby on Rails project:</p>
-
-<img class="img-responsive" src="/img/guides/github-ruby-on-rails.png"/>
-
-<h3>GitHub Pages</h3>
-<p>GitHub Pages are public webpages hosted for free through GitHub. GitHub users can create and host both personal websites (one allowed per user) and websites related to specific GitHub projects. Pages lets you do the same things as GitHub, but if the repository is named a certain way and files inside it are HTML or Markdown, you can view the file like any other website. GitHub Pages is the self-aware version of GitHub. Pages also comes with a powerful <a href="http://staticgen.com/">static site generator</a> called <a href="http://jekyllrb.com/">Jekyll</a>, which we'll learn more about later on.</p>
-
-<h2>Getting Started with GitHub Pages</h2>
-<p>Don't worry if some of these concepts are still a little fuzzy to you. The best way to learn this stuff is to just start doing the work, so let's not waste anymore time and dive right in.</p>
-
-<p><span class="step">1</span>Create your project's repository. Login to your GitHub account and go to <a href="https://github.com/new">https://github.com/new</a> or click the New repository icon from your account homepage.</p>
-
-<img class="img-responsive" src="/img/guides/01-create-repo.png"/>
-
-<p><span class="step">2</span> Name your repository <code>username.github.io</code>, replacing <code>username</code> with your GitHub username. Be sure it is public and go ahead and tell GitHub to create a <code>README</code> file upon generating the repo.</p>
-
-<img class="img-responsive" src="/img/guides/02-name-repo.png"/>
-
-<p><span class="step">3</span> Create an <code>index.html</code> page by clicking the plus icon next to your repository name and typing the file name directly in the input box that appears.</p>
-
-<img class="img-responsive" src="/img/guides/03-01-create-index-page.png"/>
-<img class="img-responsive" src="/img/guides/03-02-create-index-page.png"/>
-
-<p>On the resulting page, put this markup inside of the GitHub text editor:</p>
-<pre class="prettyprint pre-scrollable"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;Hank Quinlan, Horrible Cop&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;nav&gt;
-    		&lt;ul&gt;
-        		&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
-	        	&lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
-        		&lt;li&gt;&lt;a href="/cv"&gt;CV&lt;/a&gt;&lt;/li&gt;
-        		&lt;li&gt;&lt;a href="/blog"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-    		&lt;/ul&gt;
-		&lt;/nav&gt;
-		&lt;div class="container"&gt;
-    		&lt;div class="blurb"&gt;
-        		&lt;h1&gt;Hi there, I'm Hank Quinlan!&lt;/h1&gt;
-				&lt;p&gt;I'm best known as the horrible cop from &lt;em&gt;A Touch of Evil&lt;/em&gt; Don't trust me. &lt;a href="/about"&gt;Read more about my life...&lt;/a&gt;&lt;/p&gt;
-    		&lt;/div&gt;&lt;!-- /.blurb --&gt;
-		&lt;/div&gt;&lt;!-- /.container --&gt;
-		&lt;footer&gt;
-    		&lt;ul&gt;
-        		&lt;li&gt;&lt;a href="mailto:hankquinlanhub@gmail.com"&gt;email&lt;/a&gt;&lt;/li&gt;
-        		&lt;li&gt;&lt;a href="https://github.com/hankquinlan"&gt;github.com/hankquinlan&lt;/a&gt;&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/footer&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-<p><span class="step">4</span> Commit <code>index.html</code>. At the bottom of the page, there is a text input area to add a description of your changes and a button to commit the file.</p>
-
-<img class="img-responsive" src="/img/guides/04-01-commit-index-page.png"/>
-
-<p>Congrats! You just built your first GitHub Pages site. View it at <a href="#">http://username.github.io</a>. Usually the first time your GitHub Pages site is created it takes 5-10 minutes to go live, so while we wait for that to happen, let's style your otherwise plain HTML site.</p>
-
-<p id="css"><span class="step">5</span> To style the content go back to your repository home and create a new file named <code>css/main.css</code>. The <code>css/</code> before the filename will automatically create a subdirectory called <code>css</code>. Pretty neat.</p>
-
-<img class="img-responsive" src="/img/guides/05-01-create-css-file.png"/>
-
-<p>Place the following inside <code>main.css</code>:</p>
-<pre class="prettyprint pre-scrollable">
-body &lbrace;
-    margin: 60px auto;
-    width: 70%;
-&rbrace;
-nav ul, footer ul &lbrace;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-&rbrace;
-nav ul li, footer ul li &lbrace;
-    display: inline;
-    margin-right: 20px;
-&rbrace;
-a &lbrace;
-    text-decoration: none;
-    color: #999;
-&rbrace;
-a:hover &lbrace;
-    text-decoration: underline;
-&rbrace;
-h1 &lbrace;
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-&rbrace;
-p &lbrace;
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-&rbrace;
-footer &lbrace;
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-&rbrace;
-
-ul.posts &lbrace; 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-&rbrace;
-
-ul.posts li &lbrace;
-    list-style: none;
-&rbrace;
-</pre>
-
-<p>Don't forget to commit the new CSS file!</p>
-
-<img class="img-responsive" src="/img/guides/06-commit-css-file.png"/>
-
-<p><span class="step">6</span> Link to your CSS file inside your HTML document's <code>&lt;head&gt;</code>. Go back to <code>index.html</code> and select the "Edit" button.</p>
-	
-<img class="img-responsive" src="/img/guides/07-01-edit-index-page.png"/>
-	
-<p>Add a link to <code>main.css</code> (new markup is in bold):</p>
-
-<pre class="prettyprint pre-scrollable"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;Hank Quinlan, Horrible Cop&lt;/title&gt;
-		<strong>&lt;!-- link to main stylesheet --&gt;</strong>
-		<strong>&lt;link rel="stylesheet" type="text/css" href="/css/main.css"&gt;</strong>
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;nav&gt;
-    		&lt;ul&gt;
-        		&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
-	        	&lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
-        		&lt;li&gt;&lt;a href="/cv"&gt;CV&lt;/a&gt;&lt;/li&gt;
-        		&lt;li&gt;&lt;a href="/blog"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-    		&lt;/ul&gt;
-		&lt;/nav&gt;
-		&lt;div class="container"&gt;
-    		&lt;div class="blurb"&gt;
-        		&lt;h1&gt;Hi there, I'm Hank Quinlan!&lt;/h1&gt;
-				&lt;p&gt;I'm best known as the horrible cop from &lt;em&gt;A Touch of Evil&lt;/em&gt; Don't trust me. &lt;a href="/about"&gt;Read more about my life...&lt;/a&gt;&lt;/p&gt;
-    		&lt;/div&gt;&lt;!-- /.blurb --&gt;
-		&lt;/div&gt;&lt;!-- /.container --&gt;
-		&lt;footer&gt;
-    		&lt;ul&gt;
-        		&lt;li&gt;&lt;a href="mailto:hankquinlanhub@gmail.com"&gt;email&lt;/a&gt;&lt;/li&gt;
-        		&lt;li&gt;&lt;a href="https://github.com/hankquinlan"&gt;github.com/hankquinlan&lt;/a&gt;&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/footer&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<p>Visit <a href="#">http://username.github.io</a> to see your styled website. It should look at like <a href="http://hankquinlan.github.io">http://hankquinlan.github.io</a>.</p>
-
-<h2>Using Jekyll with GitHub Pages</h2>
-<p>Like GitHub Pages, Jekyll is self-aware, so if you add folders and files following specific naming conventions, when you commit to GitHub, Jekyll will magically build your website.</p>
-<p>While I recommend setting up Jekyll on your own computer so you can edit and preview your site locally, and when ready, push those changes to your GitHub repo, we're not going to do that. Instead, to quickly get a handle on how Jekyll works, we're going to build it into our GitHub repo using the GitHub web interface.</p>
-<h3>What is Jekyll?</h3>
-<p>Jekyll is a very powerful static site generator. In some senses, it is a throwback to the days of static HTML before databases were used to store website content. For simple sites without complex architectures, like a personal website, this is a huge plus. When used alongside GitHub, Jekyll will automatically re-generate all the HTML pages for your website each time you commit a file.</p> 
-<p>Jekyll makes managing your website easier because it depends on templates. Templates (or layouts in Jekyll nomenclature) are your best friend when using a static site generator. Instead of repeating the same navigation markup on every page I create, which I'd have to edit on every page if I add, remove, or change the location of navigation item, I can create what Jekyll calls a layout that gets used on all my pages. In this tutorial, we're going to create two Jekyll templates to help power your website.</p>
-<h3>Setting Up Jekyll on github.com</h3>
-<p>In order for Jekyll to work with your site, you need to follow <a href="http://jekyllrb.com/docs/structure/">Jekyll's directory structure</a>. To learn about this structure, we're going to build it right into our GitHub repo.</p>
- 
-<p><span class="step">7</span> Create a <code>.gitignore</code> file. This file tells Git to ignore the <code>_site</code> directory that Jekyll automatically generates each time you commit. Because this directory and all the files inside are written each time you commit, you do not want this directory under version control.</p>
-
-<img class="img-responsive" src="/img/guides/08-01-create-gitignore.png"/>
-
-<p>Add this simple line to the file:</p>
-<pre class="prettyprint pre-scrollable">
-	_site/
-</pre>
-
-<p><span class="step">8</span> Create a <code>_config.yml</code> file that tells Jekyll some basics about your project. In this example, we're telling Jekyll the name of our site and what version of Markdown we'd like to use:</p>
-<pre class="prettyprint pre-scrollable">
-	name: Hank Quinlan, Horrible Cop
-	markdown: kramdown
-</pre>
-<p><em>At this point, I'm hopeful that you've got the hang of creating files and directories using the GitHub web interface, so I'm going stop using screenshots to illustrate those actions.</em></p>
-<p><span class="step">9</span>Make a <code>_layouts</code> directory, and create file inside it called <code>default.html</code>. (Remember, you can make directories while making new files. See the <a href="#css"><code>main.css</code> step</a> if you forgot.)</p> 
-<p>This is our main layout that will contain repeated elements like our <code>&lt;head&gt;</code> and <code>&lt;footer&gt;</code>. Now we won't have to repeat that markup on every single page we create, making maintenance of our site much easier. So let's move those elements from <code>index.html</code> into <code>default.html</code> to get something that looks like this in the end:</p>
-<pre class="prettyprint pre-scrollable"><code>&lt;!DOCTYPE html&gt;
-	&lt;html&gt;
-		&lt;head&gt;
-			&lt;title&gt;&lbrace;&lbrace; page.title &rbrace;&rbrace;&lt;/title&gt;
-			&lt;!-- link to main stylesheet --&gt;
-			&lt;link rel="stylesheet" type="text/css" href="/css/main.css"&gt;
-		&lt;/head&gt;
-		&lt;body&gt;
-			&lt;nav&gt;
-	    		&lt;ul&gt;
-	        		&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
-		        	&lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
-	        		&lt;li&gt;&lt;a href="/cv"&gt;CV&lt;/a&gt;&lt;/li&gt;
-	        		&lt;li&gt;&lt;a href="/blog"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-	    		&lt;/ul&gt;
-			&lt;/nav&gt;
-			&lt;div class="container"&gt;
-			
-			&lbrace;&lbrace; content &rbrace;&rbrace;
-			
-			&lt;/div&gt;&lt;!-- /.container --&gt;
-			&lt;footer&gt;
-	    		&lt;ul&gt;
-	        		&lt;li&gt;&lt;a href="mailto:hankquinlanhub@gmail.com"&gt;email&lt;/a&gt;&lt;/li&gt;
-	        		&lt;li&gt;&lt;a href="https://github.com/hankquinlan"&gt;github.com/hankquinlan&lt;/a&gt;&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/footer&gt;
-		&lt;/body&gt;
-	&lt;/html&gt;</code></pre>
-
-<p>Take note of the <code>&lbrace;&lbrace; page.title &rbrace;&rbrace;</code> and <code>&lbrace;&lbrace; content &rbrace;&rbrace;</code> tags in there. They're what Jekyll calls liquid tags, and these are used to inject content into the final web page. More on this in a bit.</p> 
-
-<p><span class="step">10</span> Now update your <code>index.html</code> to use your default layout:</p>
-<pre class="prettyprint pre-scrollable"><code>---
-layout: default
-title: Hank Quinlan, Horrible Cop
----
-&lt;div class="blurb"&gt;
-	&lt;h1&gt;Hi there, I'm Hank Quinlan!&lt;/h1&gt;
-	&lt;p&gt;I'm best known as the horrible cop from &lt;em&gt;A Touch of Evil&lt;/em&gt; Don't trust me. &lt;a href="/about"&gt;Read more about my life...&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;!-- /.blurb --&gt;</code></pre>
-
-<p>Notice the plain text at the top of the file. Jekyll calls this the Front-matter. Any file on your site that contains this will be processed by Jekyll. Every time you commit a file that specifies <code>layout: default</code> at the top, Jekyll will magically generate the full HTML document by replacing <code>&lbrace;&lbrace; content &rbrace;&rbrace;</code> in <code>_layouts/default.html</code> with the contents of the committed file. Awesome!</p>
-
-<h3>Setting up a Blog</h3>
-<p>A Jekyll-based blog uses the same conventions that we've familiarized ourselves with in the previous steps, but takes things further by adding a few more for us to follow. Jekyll is very flexible allowing you to extend your site as you wish, but in this guide we're only going to cover the basics: creating a post, making a page to list our posts, creating a custom permalink for posts, and creating an RSS feed for the blog.</p> 
-
-<p>We'll want to create a new layout for our blog posts called <code>post.html</code> and a folder to store each individual post called <code>_posts/</code>.</p>
-<p><span class="step">11</span> Start by creating the layout. Create a file named <code>post.html</code> in your <code>_layouts</code> folder. Notice the post layout uses the default layout as it's base, and adds a couple new liquid tags to print the title of the post and date:</p>
-<pre class="prettyprint pre-scrollable"><code>---
-layout: default
----
-&lt;h1&gt;&lbrace;&lbrace; page.title &rbrace;&rbrace;&lt;/h1&gt;
-&lt;p class="meta"&gt;&lbrace;&lbrace; page.date | date_to_string &rbrace;&rbrace;&lt;/p&gt;
-
-&lt;div class="post"&gt;
-  &lbrace;&lbrace; content &rbrace;&rbrace;
-&lt;/div&gt;</code></pre>
-
-<p><span class="step">12</span> Make a <code>_posts/</code> directory where we'll store our blog posts. Inside that folder will be our first post. Jekyll is very strict with how these files are named, so pay attention. It must follow the convention <code>YYYY-MM-DD-title-of-my-post.md</code>. This file name gets translated into the permalink for the blog post. So in this example, we'll create a file named <code>2014-04-30-hank-quinlan-site-launched.md</code>:
-<pre class="prettyprint pre-scrollable"><code>---
-layout: post
-title: "Hank Quinlan, Horrible Cop, Launches Site"
-date: 2014-04-30
----
-
-Well. Finally got around to putting this old website together. Neat thing about it - powered by &lbrack;Jekyll&rbrack;&lpar;http://jekyllrb.com&rpar; and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.</code></pre>
-
-	<p>Note the file extension <code>.md</code> stands for Markdown, and the Markdown syntax used inside the file gets converted to HTML by Jekyll. Like Wikitext, <a href="https://daringfireball.net/projects/markdown/">Markdown</a> is a markup language with a syntax closer to plain text. The idea of Markdown is to get out of the author's way so they can write their HTML content quickly, making Markdown very suitable as a blog authoring syntax. If you aren't already, you'll want to get familiar with Markdown syntax, and this <a href="http://packetlife.net/media/library/16/Markdown.pdf">printable cheatsheet (PDF)</a> will be your best friend.</p>
-	
-	<p>After committing the new post, navigate to <a href="#">http://username.github.io/YYYY/MM/DD/name-of-your-post</a> to view it.</p> 
-	
-<p>All this is great, but your readers won't always know the exact URLs of your posts. So next we need to create a page on our site that lists each post's title and hyperlink. You could create this list on your homepage or alternatively, create a blog subpage that collects all of your posts. We're going to do the latter.</p>
-		
-<p><span class="step">13</span> Create a <code>blog</code> directory and create a file named <code>index.html</code> inside it. To list each post, we'll use a foreach loop to create an unordered list of our blog posts:</p>
-<pre class="prettyprint pre-scrollable"><code>---
-layout: default
-title: Hank Quinlan's Blog
----
-	&lt;h1&gt;&lbrace;&lbrace; page.title &rbrace;&rbrace;&lt;/h1&gt;
-	&lt;ul class="posts"&gt;
-
-	  &lbrace;&percnt; for post in site.posts &percnt;&rbrace;
-	    &lt;li&gt;&lt;span&gt;&lbrace;&lbrace; post.date | date_to_string &rbrace;&rbrace;&lt;/span&gt; &raquo; &lt;a href="&lbrace;&lbrace; post.url &rbrace;&rbrace;" title="&lbrace;&lbrace; post.title &rbrace;&rbrace;">&lbrace;&lbrace; post.title &rbrace;&rbrace;&lt;/a&gt;&lt;/li&gt;
-	  &lbrace;&percnt; endfor &percnt;&rbrace;
-	&lt;/ul&gt;</code></pre>
-	
-	<p>Now checkout <a href="#">http://username.github.io/blog/</a>. You should see your first post listed and linked there. Nice job!</p>
-	
-	<h3>Customizing Your Blog</h3>
-	<p>We've only begun to scratch the surface with Jekyll's blog aware functionality. This guide is only going to cover a couple more steps you might want to take for your blog.</p>
-	
-	<p>You may have noticed that the URL of your blog post does not include the blog directory in it. In Jekyll we can control the structure of our permalinks by editing the <code>_config.yml</code> file we created in Step 8. So let's change our permalink structure to include the blog directory.</p>
-	
-	<p><span class="step">14</span> Edit the <code>_config.yml</code> file. Add the following line at the end of the file:</p>
-		
-		<pre class="prettyprint pre-scrollable"><code>permalink: /blog/:year/:month/:day/:title</code></pre>
-	
-	<p>Now you're blog posts will live at <a href="#">http://username.github.io/<strong>blog/</strong>YYYY/MM/DD/name-of-your-post</a>.</p>
-	
-	<p>It is also very easy to setup an RSS feed for your blog. Every time you publish a new post, it will get added to this RSS file.</a>
-	<p><span class="step">15</span> Inside your <code>blog/</code> directory create a file and name it <code>atom.xml</code>. Add this to file:
-<pre class="prettyprint pre-scrollable"><code>---
-layout: feed
----
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;feed xmlns="http://www.w3.org/2005/Atom"&gt;
-
-	&lt;title&gt;Hank Quinlan's Blog&lt;/title&gt;
-	&lt;link href="http://hankquinlan.github.io/blog/atom.xml" rel="self"/&gt;
-	&lt;link href="http://hankquinlan.github.io/blog"/&gt;
-	&lt;updated&gt;&lbrace;&lbrace; site.time | date_to_xmlschema &rbrace;&rbrace;&lt;/updated&gt;
-	&lt;id&gt;http://hankquinlan.github.io/blog&lt;/id&gt;
-	&lt;author&gt;
-		&lt;name&gt;Hank Quinlan&lt;/name&gt;
-		&lt;email&gt;hankquinlanhub@gmail.com&lt;/email&gt;
-	&lt;/author&gt;
-
-	&lbrace;&percnt; for post in site.posts &percnt;&rbrace;
-		&lt;entry&gt;
-			&lt;title&gt;&lbrace;&lbrace; post.title &rbrace;&rbrace;&lt;/title&gt;
-			&lt;link href="http://hankquinlan.github.io&lbrace;&lbrace; post.url &rbrace;&rbrace;"/&gt;
-			&lt;updated&gt;&lbrace;&lbrace; post.date | date_to_xmlschema &rbrace;&rbrace;&lt;/updated&gt;
-			&lt;id&gt;http://hankquinlan.github.io/&lbrace;&lbrace; post.id &rbrace;&rbrace;&lt;/id&gt;
-			&lt;content type="html"&gt;&lbrace;&lbrace; post.content | xml_escape &rbrace;&rbrace;&lt;/content&gt;
-		&lt;/entry&gt;
-	&lbrace;&percnt; endfor &percnt;&rbrace;
-
-&lt;/feed&gt;</code></pre>
-<p>Now you can include a link to your RSS feed somewhere on your site for users to subscribe to your blog in their feed aggregator of choice. Navigate to <a href="#">http://username.github.io/blog/atom.xml</a> to view your feed.</p>
-
-<p><em>Note: In Chrome, your feed might look like an error, but it isn't. <a href="https://code.google.com/p/chromium/issues/detail?id=434">Chrome doesn't know how to display XML</a>.</em></p>
-
-<h2>Wrapping Up</h2>		
-<p><span class="step">16</span> You're almost done! Don't forget to create and commit your <code>about/index.html</code> and <code>cv/index.html</code> pages. Since I'm sure you've got the hang of things now, I'll back off and let you get these pages finished on your own.</p> 
-
-<p><span class="step">17</span> Before going any further, take the time to <a href="https://help.github.com/articles/set-up-git">setup Git</a> and <a href="http://jekyllrb.com/docs/installation/">Jekyll</a> on your own computer. This tutorial is all about Git in the web browser, so really it's only the half way point. <strong>You're going to have to do this if you want to be able to upload image or PDF files to your GitHub repo.</strong> GitHub's tutorials and desktop application make local setup easy, and now that you know many of Git and GitHub's basic concepts, you should be able to get this going. Go do it!</p>
-
-<h2>Next Steps</h2>
-<p>Hopefully this guide has given you the confidence to do many other things with Git, GitHub, Jekyll, and your website or blog. You could go in many different directions at this point, as I'm sure you've already started thinking about, but here are a few other things I think would be worth your time:</p>
+<blockquote>
+<p><strong>알아둘 것</strong>: 사용자 페이지의 저장소는 반드시 그 자신의 계정 이름밖에 사용하지 못한다. 다시 말해서 <code>joe/bob.github.com</code>식의 저장소는 페이지로 작동하지 않는다.</p>
+</blockquote>
+<h3 id="-">프로젝트 페이지</h3>
+<p>사용자 페이지와는 다르게 <strong>프로젝트 페이지</strong>는 그 프로젝트의 저장소를 그대로 사용한다. (새로 저장소를 만들 필요 없다.) 그렇게 만들어진 페이지는 몇 가지를 제외하고 사용자 페이지와 완전히 똑같다.</p>
 <ul>
-	<li><a href="http://yeswejekyll.com/#_includes">Create <code>_includes</code></a>. They're a lot like <code>_layouts</code>, only smaller snippets of markup and can be injected into your <code>_layouts</code> and pages.
-		<ul><li>Try creating an <code>_include</code> file that inserts Google Analytics tracking code into your <code>&lt;head&gt;</code> so you can get stats on the visitors to your website. Here's an <a href="https://github.com/jmcglone/jmcglone.github.io/blob/master/_includes/analytics.html">example</a>.</li>
-			<li>Want commenting for your blog? Create a <a href="https://github.com/jmcglone/jmcglone.github.io/blob/master/_includes/disqus.html">DISQUS <code>_include</code></a> and <a href="https://github.com/jmcglone/jmcglone.github.io/blob/master/_layouts/post.html">call it in your <code>post.html</code> layout</a>.</li></ul></li>
-	<li>Don't want github.io in your URL? <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages">Set up a custom domain</a>.</li>
-	<li><a href="http://jekyllrb.com/docs/pagination/">Add blogging pagination</a></li>
-	<li>Create a <code>sitemap.xml</code> file for better SEO. <a href="https://help.github.com/articles/sitemaps-for-github-pages">You can have one automatically generated by GitHub Pages</a>. See <a href="https://github.com/jmcglone/jmcglone.github.io/blob/master/sitemap.xml">this one</a> I use for my site.</li>
-	<li>Become a coding pro and create a <code>development</code> branch of your site. Each time you want to fix a bug or add a new feature you can create a copy of your master branch, make your changes, and then merge that brance to the master branch. <a href="https://help.github.com/articles/branching-out">The idea is to keep the master branch clean</a>.</li>
-	<li>Need more inspiration? Check out how <a href="http://jekyllrb.com/docs/sites/">the sites from the developers of Jekyll</a> are setup or browse this <a href="https://github.com/jekyll/jekyll/wiki/Sites">huge list of sites using Jekyll</a>.</li>
+<li>페이지를 만들거나 퍼블리싱 할 때에 <strong>gh-pages</strong> 브랜치를 사용한다.</li>
+<li>커스텀 도메인을 사용하지 않으면 프로젝트 페이지는 사용자 페이지의 서브 경로로 제공된다. 주소는 <code>username.github.com/projectname</code>의 형태를 띈다.</li>
+<li>커스텀 404 에러 페이지를 사용하려면 커스텀 도메인을 사용해야 한다. 커스텀 도메인을 사용하지 않으면 사용자 페이지의 404 에러 페이지를 사용하게 된다.</li>
 </ul>
-<h2 id="resources">Resources</h2>
-<p>I'll try to keep this list current and up to date. If you know of a great resource you'd like to share or notice a broken link, please <a href="/contact">get in touch</a>.</p>
-<h3>Git, GitHub, and GitHub Pages</h3>
-<ul>
-<li><a href="http://git-scm.com/doc">Git Documentation</a></li>
-<li><a href="https://try.github.io/levels/1/challenges/1">Learn Git and GitHub in 15 minutes</a></li>
-<li><a href="https://help.github.com/categories/20/articles">GitHub Pages Help</a></li>
-<li><a href="https://help.github.com/">GitHub Help</a></li>
-<li><a href="https://github.com/tiimgreen/github-cheat-sheet">GitHub Cheat Sheet</a></li>
-<li><a href="https://help.github.com/articles/github-glossary">GitHub Glossary</a></li>
-<li><a href="http://blogs.lse.ac.uk/impactofsocialsciences/2013/06/04/github-for-academics/">GitHub For Academics</a></li>
-</ul>
+<h2 id="3-">3. 자동으로 페이지 만들기</h2>
+<p>프로젝트나 사용자의 페이지를 빠르게 만들려면 GitHub에서 제공하는 페이지 제작 도구를 이용한다.</p>
+<h3 id="-">사용자 페이지</h3>
+<p>사용자 페이지를 만들려면 우선 <code>username.github.com</code>이나 <code>orgname.github.com</code>이란 이름의 저장소를 만들어야 한다. 물론 여기서 username이나 orgname은 자기 자신의 github계정 이름이어야 한다. 그렇지 않으면 페이지는 만들어지지 않는다. 저장소의 admin 페이지에 가면 제작 도구를 사용할 수 있다.</p>
+<h3 id="-">프로젝트 페이지</h3>
+<p>모든 프로젝트 저장소에서 페이지를 만들고 퍼블리싱 할 수 있다. 하지만 주의할 것은 비공개 저장소에서 만든 페이지는 공개 페이지가 된다. (비공개 페이지를 만들 수 없다.)</p>
+<h3 id="-">자동 페이지 제작 도구</h3>
+<ol>
+<li><p>저장소의 admin 페이지로 간다.</p>
+<p><img src="/articles/2012/github-pages/repo-actions-admin.png" alt="repo-actions-admin"></p>
+</li>
+<li><p>&quot;Automatic Page Generator&quot; 버튼을 클릭한다.</p>
+<p><img src="/articles/2012/github-pages/pages-automatic-page-generator.png" alt="pages-automatic-page-generator"></p>
+</li>
+<li>마크다운 에디터로 내용을 작성한다.</li>
+<li>&quot;Continue To Layouts&quot; 버튼을 누른다.</li>
+<li><p>제공되는 테마들을 적용해서 미리보기로 확인한다.</p>
+<p><img src="/articles/2012/github-pages/page-generator-picker.png" alt="page-generator-picker"></p>
+</li>
+<li><p>좋아하는 테마를 발견했으면 &quot;Publish&quot;를 클릭한다.</p>
+<p><img src="/articles/2012/github-pages/page-generator-publish.png" alt="page-generator-publish"></p>
+</li>
+</ol>
+<p>페이지가 만들어진 후에 로컬에 복사본을 얻을 수 있다. 프로젝트 페이지를 만들었다면 새로운 브랜치를 fetch 후 checkout 한다.</p>
+<pre><code>$ cd repo
+$ git fetch origin
+remote: Counting objects: 92, done.
+remote: Compressing objects: 100% (63/63), done.
+remote: Total 68 (delta 41), reused 0 (delta 0)
+Unpacking objects: 100% (68/68), done.
+From https://github.com/user/repo.git
+ * [new branch]      gh-pages     -&gt; origin/gh-pages
 
-<h3>Jekyll</h3>
-<ul>
-<li><a href="https://github.com/jekyll/jekyll/wiki/Sites">Sites Using Jekyll</a></li>
-<li><a href="http://import.jekyllrb.com/docs/home/">Blog Migrations to Jekyll</a></li>
-</ul>
+$ git checkout gh-pages
+Branch gh-pages set up to track remote branch gh-pages from origin.
+Switched to a new branch &#39;gh-pages&#39;
+</code></pre><p>사용자 페이지를 만들었다면 페이지 코드는 gh-pages 브랜치가 아니라 master 브랜치에 페이지의 코드가 들어있다. 따라서 그냥 master 브랜치를 check out 한 뒤 pull 명령을 내리면 된다.</p>
+<pre><code>$ cd repo
+$ git checkout master
+Switched to branch &#39;master&#39;
+$ git pull origin master
+remote: Counting objects: 92, done.
+remote: Compressing objects: 100% (63/63), done.
+remote: Total 68 (delta 41), reused 0 (delta 0)
+Receiving objects: 100% (424/424), 329.32 KiB | 178 KiB/s, done.
+Resolving deltas: 100% (68/68), done.
+From https://github.com/user/repo.git
+ * branch      master     -&gt; FETCH_HEAD
+Updating abc1234..def5678
+Fast-forward
+index.html                                     |  265 ++++
+...
+98 files changed, 18123 insertions(+), 1 deletion(-)
+create mode 100644 index.html
+...
+</code></pre><h2 id="4-">4. 수동으로 페이지 만들기</h2>
+<p>git을 command-line으로 사용해왔다면 수동으로 새로운 페이지를 만드는 건 어렵지 않다.</p>
+<h3 id="-">안전하게 가자</h3>
+<p>프로젝트에 페이지를 만들어 넣으려면 저장소에 &quot;부모가 없는(orphan)&quot; 브랜치를 만들어야 한다. 이걸 하는 가장 안전한 방법은 우선 새로 저장소를 클론하는 것이다.</p>
+<pre><code>git clone https://github.com/user/repo.git
+Clone our repo
 
-<h3>Markdown</h3>
+Cloning into &#39;repo&#39;...
+remote: Counting objects: 2791, done.
+remote: Compressing objects: 100% (1225/1225), done.
+remote: Total 2791 (delta 1722), reused 2513 (delta 1493)
+Receiving objects: 100% (2791/2791), 3.77 MiB | 969 KiB/s, done.
+Resolving deltas: 100% (1722/1722), done.
+</code></pre><h3 id="-">이제 놀자!</h3>
+<p>깨끗한 저장소를 손에 넣었다. 이제 새로운 브랜치를 만들고 작업 디렉토리와 인덱스의 모든 내용을 지워야 한다.</p>
+<pre><code>$ cd repo
+
+$ git checkout --orphan gh-pages
+Creates our branch, without any parents (it&#39;s an orphan!)
+
+Switched to a new branch &#39;gh-pages&#39;
+
+git rm -rf .
+Remove all files from the old working tree
+
+rm &#39;.gitignore&#39;
+</code></pre><blockquote>
+<p><strong>알아둘 것</strong>: <code>gh-pages</code> 브랜치는 처음 커밋이 되기 전까지는 <code>git branch</code>의 브랜치 목록에 나타나지 않는다.</p>
+</blockquote>
+<p>비어있는 작업 디렉토리를 얻었다. 이 안에 내용을 채워넣고 GitHub로 푸시하면 된다. 예를 들자면 다음과 같다.</p>
+<pre><code>$ echo &quot;My GitHub Page&quot; &gt; index.html
+$ git add .
+$ git commit -a -m &quot;First pages commit&quot;
+$ git push origin gh-pages
+</code></pre><blockquote>
+<p><strong>알아둘 것</strong>: 최초의 푸시를 한 뒤에 페이지가 보이기까지는 몇 분 정도 기다려야 한다.</p>
+</blockquote>
+<h2 id="5-jekyll-">5. Jekyll과 페이지</h2>
+<p>일반적인 HTML 컨텐츠를 지원하는 차원에서 GitHub의 페이지는 <a href="https://github.com/mojombo/jekyll">Jekyll</a>을 지원한다. (역자주: &#39;지킬 박사와 하이드&#39;의 지킬이다.) Jekyll은 &#39;Tom Preston-Werner&#39;이 제작한 간단한 스태틱 사이트 제네레이터이다. Jekyll을 이용하면 웹사이트 전체에 적용되는 헤더, 푸터를 파일을 여러 번 복제하지 않고도 만들 수 있다. 블로그 기능이나 멋진 템플릿 기능들도 지원한다.</p>
+<h3 id="jekyll-">Jekyll 사용하기</h3>
+<p>GitHub의 모든 페이지는 Jekyll로 돌아간다. 일반 HTML 파일 또한 유효한 Jekyll 사이트이기 때문에 이미 가지고 있던 HTML 파일들을 수정하지 않아도 된다. 그냥 전부 HTML 파일이면 괜찮다. <a href="https://github.com/mojombo/jekyll/blob/master/README.textile">README</a>에 Jekyll의 기능들과 그 사용법이 적혀있다.</p>
+<h3 id="jekyll-">Jekyll 설정하기</h3>
+<p><code>_config.yml</code> 파일에 Jekyll의 대부분의 설정이 다 들어있다. 퍼머 링크의 스타일이나 마크다운 렌더러를 Maruku에서 RDiscount로 바꿀 수도 있다. 아래와 같은 옵션만 바꾸면 된다.</p>
+<pre><code>safe: true
+source: &lt;your pages repo&gt;
+destination: &lt;the build dir&gt;
+lsi: false
+pygments: true
+</code></pre><h3 id="troubleshooting">Troubleshooting</h3>
+<p>사이트를 GitHub에 푸시 후에도 Jekyll 사이트가 보이지 않는다면 Jekyll을 로컬에서 돌려보면 여러 오류를 잡을 수 있다. 이 기능을 위해 GitHub에서 사용하는 것과 같은 버전의 Jekyll을 사용하길 바란다.</p>
+<p>GitHub의 페이지 서버는 Jekyll 버전 0.11.0, Liquid 버전 2.2.2를 사용하고 다음 명령어로 실행을 시킨다.</p>
+<pre><code>$ jekyll --pygments --no-lsi --safe
+</code></pre><p>만약 GitHub에 푸시하고도 페이지가 만들어지지 않으면 &#39;페이지가 안 보여요&#39;가이드를 보라.</p>
+<h4 id="jekyll-">Jekyll 끄기</h4>
+<p>Jekyll을 그만 사용하려면 저장소의 루트에 <code>.nojekyll</code>이란 이름의 파일을 만들고 푸시하기만 하면 된다.</p>
+<h3 id="-">기여하기</h3>
+<p>Jekyll에 필요한 기능이 있으면 주저하지 말고 <a href="https://github.com/mojombo/jekyll">fork</a> 한 뒤에 풀 리퀘스트를 보내면 된다. 이런 건 언제든지 환영한다</p>
+<h2 id="6-">6. 페이지에 커스텀 도메인 설정하기</h2>
+<p>GitHub의 페이지에 사용자가 지정하는 도메인 이름을 설정해줄 수 있다.</p>
+<h3 id="-">저장소에 도메인 설정하기.</h3>
+<p>우리가 가지고 있는 도메인이 <code>example.com</code>라 치고 이걸 우리 페이지에 연결해보자. GitHub에게 이 도메인으로 서비스해주세요~ 라고 말하는 건 쉽다. 페이지의 루트에 CNAME 이라는 파일을 하나 만들고 도메인 이름을 적어넣으면 된다.</p>
+<pre><code>example.com
+</code></pre><blockquote>
+<p><strong>알아둘 것</strong>: 이 파일을 만들고 GitHub에서 페이지를 성공적으로 만들었다는 알림을 확인한 후에 다음 단계인 &#39;DNS 세팅하기&#39;를 시작해야 한다.</p>
+</blockquote>
+<p>만약 <strong>사용자 페이지</strong> 저장소에서 작업하고 있다면 이 일은 <strong>master</strong>브랜치에서 해야 하고 <strong>프로젝트 페이지</strong> 저장소라면 <strong>gh-pages</strong>브랜치에서 작업을 해야 한다.</p>
+<blockquote>
+<p><strong>알아둘 것</strong>: 하나의 페이지에는 하나의 커스텀 도메인만 할당할 수 있다. 만약 같은 페이지에 여러 도메인을 할당하고 싶다면 다른 도메인에서 당신의 페이지로 리다이렉트 해주는 서비스 등을 이용해야 할 것이다.</p>
+</blockquote>
+<h3 id="dns-">DNS 세팅하기</h3>
+<p>다음은 DNS를 세팅할 차례이다. 세팅은 사용하는 도메인의 종류에 따라서 두 가지 방법으로 나눌 수 있다.</p>
+<p>아, DNS 변경이 전 세계로 퍼지기까지는 약 하루가 걸린다. 인내를 가지고 기다려야 한다.</p>
+<h4 id="top-level-tld-">Top-level 도메인 (TLD)</h4>
+<p><code>example.com</code>과 같은 TLD은 <strong>A 레코드</strong>가 204.232.175.78를 가리키도록 해야 한다.</p>
+<pre><code>$ dig example.com +nostats +nocomments +nocmd
+# Look up DNS record for example.com
+;example.com.                    IN      A
+example.com.             3259    IN      A       204.232.175.78
+</code></pre><blockquote>
+<p><strong>경고</strong>: TLD에는 CNAME 레코드를 사용하면 안 된다. CNAME 레코드를 쓰면 해당 도메인의 다른 서비스들(예를 들면 이메일 같은)에 문제가 생길 수 있다.</p>
+</blockquote>
+<h4 id="-">서브 도메인</h4>
+<p>서브 도메인을 할당하려면 <strong>CNAME 레코드</strong>로 사용자 페이지 서브 도메인을 가리키는게 최고다. 이 방법을 이용하면 GitHub 서버의 IP가 바뀌어도 자동으로 조정해준다. CNAME 레코드는 A 레코드 위에 쓸 수도 있다. 하지만 이 정보는 자동으로 업데이트 되지 않는다.</p>
+<pre><code>$ dig www.example.com +nostats +nocomments +nocmd
+;www.example.com.                 IN      A
+www.example.com.          3592    IN      CNAME   username.github.com.
+username.github.com.      43192   IN      A       204.232.175.78
+</code></pre><h3 id="-">자동 리다이렉트</h3>
+<p>커스텀 도메인을 세팅하면 서버는 자동으로 몇 가지 리다이렉트 기능을 제공한다.</p>
 <ul>
-	<li><a href="http://daringfireball.net/projects/markdown/">Official Markdown Spec</a></li>
-	<li><a href="http://packetlife.net/media/library/16/Markdown.pdf">Printable Markdown Cheatsheet</a></li>
-	<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></li>
-	<li><a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown</a></li>
+<li>사용자 페이지에서는 <code>username.github.com</code> ⇒ <code>example.com</code></li>
+<li>TDL에서는 <code>www.example.com</code> ⇒ <code>example.com</code></li>
+<li>www 서브 도메인을 사용 중이라면 <code>example.com</code> ⇒ <code>www.example.com</code></li>
 </ul>
-<hr>
-<div class="notes">
-<h2>Notes</h2>
-<p id="n1">1. Somasundaram, R. (2013). <em>Git: Version Control for Everyone</em> (pp. 9-17). Birmingham, UK: Packt Publishing. 
+<p><code>www</code> ⇔ TLD 리다이렉트가 동작하려면 TLD와 <code>www</code> 서브 도메인 DNS의 레코드가 페이지의 서버를 가리키고 있어야 한다.</p>
+<blockquote>
+<p><strong>알아둘 것</strong>: 사용자 페이지의 커스텀 도메인은 자체의 커스텀 도메인을 가진 프로젝트 페이지는 제외하고 그 계정 아래에 있는 모든 프로젝트 페이지를 같은 도메인으로 리다이렉트한다.</p>
+<p><strong>경고</strong>: <code>http://username.github.com/projectname</code>과 같은 프로젝트 페이지의 서브 경로는 프로젝트의 커스텀 도메인으로 리다이렉트 되지 않는다.</p>
+</blockquote>
+<h3 id="-">실제 예제</h3>
+<p><a href="http://github.com/mojombo/mojombo.github.com/">mojombo.github.com</a> 은 <a href="http://tom.preston-werner.com/">tom.preston-werner.com</a> 로 리다이렉트 된다. 커스텀 도메인은 <a href="https://github.com/mojombo/mojombo.github.com/blob/master/CNAME">이 파일</a>에 정의되어 있다.</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>커스텀 도메인 설정에 문제가 생기면 <a href="https://help.github.com/articles/my-custom-domain-isn-t-working">이 가이드</a>를 보면 된다.</p>
+<h2 id="7-404-">7. 커스텀 404 페이지</h2>
+<p>404.html 파일을 저장소의 루트에 넣어두면 기존 404페이지 대신 저장소의 404.html 페이지를 보여준다. 404 페이지는 반드시 html 파일이어야 한다.</p>
+<blockquote>
+<p><strong>알아둘 것</strong>: 커스텀 404 페이지는 페이지 도메인의 루트에 존재해야만 작동한다. 커스텀 도메인을 사용하지 않는 프로젝트 페이지의 커스텀 404 페이지는 동작하지 않는다. (프로젝트 페이지는 루트도메인 외에 프로젝트 이름이 경로에 추가되므로)</p>
+</blockquote>
+<h3 id="-">실제 예제</h3>
+<p><a href="http://github.com/tekkub/tekkub.github.com/blob/master/404.html">Tekkub의 404</a> 페이지는 <a href="http://tekkub.net/404.html">tekkub.net/404.html</a> 에서 볼 수 있다.</p>
+<h2 id="8-unable-to-run-jekyll-">8. 페이지가 안 보여요. &quot;unable to run Jekyll!&quot;</h2>
+<p>가끔 페이지는 푸시 후에 빌드에 실패해서 &quot;unable to run jekyll&quot;이라는 에러를 내뱉을 때가 있다. 이 에러가 나올 수 있는 몇몇 원인을 알아보자.</p>
+<h3 id="-">저수준 태그 에러</h3>
+<p>Jekyll은 현재 저수준의 Liquid 태그에 대한 <a href="https://github.com/mojombo/jekyll/issues/425">이슈사항</a>이 있다. 만약 이 기능을 사용한다면 템플릿에 중괄호 등을 이스케이프 시킬 때는 HTML 이스케이프 시퀀스 같은 방법을 사용하는 등의 우회로를 찾아야 한다.</p>
+<h3 id="-">안전하지 않은 플러그인</h3>
+<p>페이지의 서버는 안전하다고 확인되지 않은 플러그인은 빌드하지 않는다. <code>_plugins</code>폴더에 있는 모든 플러그인 또한 이 규칙에 적용받는다.
+이 문제는 두 가지 해결책이 존재한다.</p>
+<ul>
+<li>안전하지 않은 플러그인을 지운다. 또는</li>
+<li>소스 파일 대신에 페이지를 로컬에서 빌드하고 그 결과 파일을 푸시한다.</li>
+</ul>
+<p>두 번째 해결책이 <a href="http://octopress.org/">Octopress</a>가 취하고 있는 전략이다.</p>
+<h3 id="-">문법 에러</h3>
+<p>때로 타이핑을 잘못 했다던가 하는 이유로 빌드가 실패하는 때도 있다. 이는 <a href="http://jekyllrb.com/">jekyll</a>을 로컬에서 <code>jekyll --safe</code>를 이용해 확실히 잡아야 한다. GitHub에서 사용하는 서버에서 사용하는 jekyll의 버전은 Jekyll과 페이지 섹션에서 알 수 있다.</p>
+<h3 id="-">소스 세팅</h3>
+<p>GitHub의 빌드 서버는 당신의 페이지를 빌드할 때 <code>source</code> 세팅을 덮어쓴다. 만약 당신이 이 세팅을 바꾼다면 페이지가 빌드되지 않을 수도 있다.</p>
+<h2 id="9-">9. 프로젝트 페이지 지우기</h2>
+<p>프로젝트 페이지를 없애려면 <code>gh-pages</code> 브랜치를 지우면 된다.</p>
+<pre><code>$ git push origin --delete gh-pages
+Delete the gh-pages branch from origin
+
+To https://github.com/username/repo.git
+- [deleted]         gh-pages
+</code></pre><h2 id="10-">10. 브랜치 모델</h2>
+<p>섹션 9 까지는 번역이었고, 10 부터는 dogfeet 블로그에서 사용하는 브랜치 모델에 대해서 설명하려 한다. 어렵지 않으나 중요하므로 얼른 하고 마치자.</p>
+<h3 id="draft-">draft/* 브랜치</h3>
+<p>모든 글은 각자 하나의 브랜치를 가진다. 이 글은 <code>draft/github-pages</code>라는 브랜치 위에서 작성 중이다. 이 블로그의 모든 글이 <code>draft/</code>라는 접미사를 가진 브랜치를 가지고 있었다. 각 글들은 자신의 브랜치 위에서 작성되고 다른 사람들과 공유하여 리뷰를 받는다. 추가돼야 할 내용이나 오타, 비문 등을 지적받고 다시 고친 뒤에 커밋 한다.
+글이 완성되면 저장용, 공유용 커밋들을 rebase를 이용해 합쳐서 1~2개의 커밋으로 정리한다. 이는 중앙 저장소의 히스토리를 예쁘게 유지하기 위함이다. 히스토리가 복잡해지면 같이 공유하는 사람에 대한 예의에 어긋난다. (...) 사람마다 다르겠지만 내 경우에 완전한 창작 글은 하나의 커밋으로 합치고 번역 글은 markdown으로 포메팅된 원문이 보존된 커밋 하나와 완성된 번역문 두 개로 정리한다.
+정리가 다 되면 ready 브랜치로 합친다.</p>
+<h3 id="ready-">ready 브랜치</h3>
+<p>정리된 draft 브랜치는 ready 브랜치로 합친다. dogfeet은 완성된 글을 곧바로 퍼블리싱하지 않고 ready 브랜치에 먼저 저장한다. 그리고는 매 주마다 master 브랜치를 ready 브랜치로 fast-forwording하여 실제 웹페이지로 보이도록 발행한다. 저장은 merge나 rebase를 하는데 둘 중에 어떤 것을 할지는 <a href="/articles/2012/git-merge-rebase.html">이 글</a>을 참고 하길 바란다.</p>
+<p>master 브랜치는 항상 fast-forwording만 한다.</p>
+<h3 id="-">정리</h3>
+<p>하나의 글을 퍼블리싱 하는 프로세스는 다음과 같다.</p>
+<ol>
+<li>master 브랜치에서 draft/&lt;어쩌구 저쩌구&gt; 라는 이름으로 새로운 브랜치를 딴다.</li>
+<li>글을 쓰고 커밋을 정리한다. 필요에 따라 서로 리뷰를 부탁하기도 한다.</li>
+<li>ready로 merge 하거나 rebase 시킨다.</li>
+<li>ready 브랜치를 master 브랜치로 fast-forword 한다.</li>
+</ol>
 </div>
-</div> <!-- /.github -->
+    </div>
+  </article>
+</section>
 
-			
-			<div class="footer">
-	<div class="row">
-	<div class="col-sm-8">
-	<p><small>&copy; jmcglone 2015</small></p>
-	</div>
-	<div class="col-sm-4">
-	<p class="pull-right"><small><a href="/about" title="About this site">About this site</a></small></p>
-	</div>
-	</div>
-</div> <!-- /footer -->
+<div id="fb-root"></div>
+<script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>
+<script src="http://platform.twitter.com/widgets.js"></script>
+<script src="https://apis.google.com/js/plusone.js"></script>
 
-		
-		</div> <!-- /container -->
-	
-	
-		<!-- javascript at the end of the doc so page loads faster -->
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/library.js"></script>
-<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-	
-	</body>
+    </div>
+    <footer class="footer"><p>Copyright &copy; 2008+ Dogfeet from coding to pixels</p></footer>
+  </div>
 
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/scripts/script.js"></script>
+
+  <script>
+    if( 'http://dogfeet.github.io/' === 'http://' + window.location.hostname ) {
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27493298-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    }
+  </script>
+</body>
 </html>
