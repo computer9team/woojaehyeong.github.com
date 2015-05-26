@@ -1,23 +1,78 @@
----
-layout: default
----
+<html itemscope itemtype="http://schema.org/QAPage">
+<head>
 
-<div class="home">
+<title>Jekyll use config.yml values in the HTML - Stack Overflow</title>
+    <link rel="shortcut icon" href="//cdn.sstatic.net/stackoverflow/img/favicon.ico?v=6cd6089ee7f6">
+    <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=41f6e13ade69">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=ea71a5211a91&a" />
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Jekyll use config.yml values in the HTML" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content="Is it possible to setup configuration values within the config.yml file and have them be printed within the HTML page within Jekyll? I would like to set the default title and description of my webs..." />
+    <meta property="og:url" content="http://stackoverflow.com/questions/12062766/jekyll-use-config-yml-values-in-the-html"/>
+    <link rel="canonical" href="http://stackoverflow.com/questions/12062766/jekyll-use-config-yml-values-in-the-html" />
 
-  <h1 class="page-heading">Posts</h1>
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=f07e1c0b90d5"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/stackoverflow/all.css?v=e7baf0bec6b1">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Jekyll use config.yml values in the HTML&#39;" href="/feeds/question/12062766">
+            <meta name="twitter:app:country" content="US" />
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:iphone" content="871299723" />
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/12062766/jekyll-use-config-yml-values-in-the-html" />
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:ipad" content="871299723" />
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/12062766/jekyll-use-config-yml-values-in-the-html" />
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/12062766/jekyll-use-config-yml-values-in-the-html">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:12062766});
 
-</div>
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '12062766');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+<script>StackExchange.ready(function() { StackExchange.question.trackNextPreviousShowQuestionEligible({"QuestionId":12062766,"ExpectedListId":null,"Referrer":"https://www.google.co.kr/"}); });</script>
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1432637489,"networkMetaHostname":"meta.stackexchange.com","routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"nonAsciiTags":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"17f5cf286b1e44e62016d7f80df4a721","isAnonymous":true,"ab":{"next_previous_buttons":{"v":"a","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"dc6c42bc1334","js/moderator.en.js":"62ac7502a1c3","js/full-anon.en.js":"45b6724ab23b","js/full.en.js":"cfdebc8afa5c","js/wmd.en.js":"6b022fef6e8d","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d0bae4abab8d","js/help.en.js":"6ed3cbd8d6df","js/tageditor.en.js":"c84618a71b61","js/tageditornew.en.js":"a033cd6258bc","js/inline-tag-editing.en.js":"48f13b102998","js/revisions.en.js":"b9f74067e1f5","js/review.en.js":"f13c84b97fdc","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"5fd1db574105","js/explore-qlist.en.js":"257ba4cb7b04","js/events.en.js":"a18ec8b14b1b","js/keyboard-shortcuts.en.js":"87963e2e5ae7","js/external-editor.en.js":"333f2972598f","js/external-editor.en.js":"333f2972598f","js/snippet-javascript.en.js":"49fc6920793f","js/snippet-javascript-codemirror.en.js":"d5e393abc060"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    
+    
+</head>
