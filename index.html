@@ -1,273 +1,468 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>Bold, Bright Bootstrap Template</title>
-		<meta name="generator" content="Bootply" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
-	</head>
-	<body>
-<!-- Wrap all page content here -->
-<div id="wrap">
-  
-<header class="masthead">
-    <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <h1><a href="#" title="Bootstrap Template">Happy Scroll</a>
-          <p class="lead">{A Bootstrap Template}</p></h1>
-      </div>
-      <div class="col-sm-6">
-        <div class="pull-right  hidden-xs">    
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><h3><i class="glyphicon glyphicon-cog"></i></h3></a>
-          <ul class="dropdown-menu">
-              <li><a href="#"><i class="glyphicon glyphicon-chevron-right"></i> Link</a></li>
-              <li><a href="#"><i class="glyphicon glyphicon-user"></i> Link</a></li>
-              <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Link</a></li>
-              <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Link</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    </div>
-</header>
-  
-  
-<!-- Fixed navbar -->
-<div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav nav-justified">
-          <li><a href="#">Home</a></li>
-          <li><a href="#section2">Product</a></li>
-          <li><a href="#section3">News</a></li>
-          <li class="active"><a href="#section1"><strong>Big Brand</strong></a></li>
-          <li><a href="#section4">About</a></li>
-          <li><a href="#section5">Contact</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div><!--/.container -->
-</div><!--/.navbar -->
-  
-<!-- Begin page content -->
-<div class="divider" id="section1"></div>
-  
-<div class="container">
-  <div class="col-sm-10 col-sm-offset-1">
-    <div class="page-header text-center">
-      <h1>Sticky Footer with Fly-in Navbar</h1>
-    </div>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Simpleyyt</title>
     
-    <p class="lead text-center">
-      Twitter Bootstrap is a front-end toolkit to rapidly build web applications.
-    </p>
-    <p class="text-center">
-      Bootstrap is a framework that uses some of the latest browser techniques to provide you with stylish typography, navigation, buttons, tables, etc. One of the primary changes in Bootstrap 3 is an emphasis on Mobile-First responsive design. The goal is to elevate the mobile experience to a first-class citizen of the design process, because several billion mobile users is quite a large market to tap into. So, sites built with the current Bootstrap version target mobile devices and scale for larger screens depending on screen size.
-    </p>
-  </div>
+	
+	<meta name="author" content="Yitao Yao">
+	
+	<link rel="stylesheet" href="/assets/themes/Snail/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/main.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/pages/journal.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/team.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/static.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/css/errors.css">
+	<link rel="stylesheet" href="/assets/themes/Snail/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="/assets/themes/Snail/img/favicon.ico">
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/js/auto_loadmore.js"></script>
+	
+	<script type="text/javascript" src="/assets/themes/Snail/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience / fully&amp;lt;/div&amp;gt;
+	</noscript>
+    <div id="page-container">
+		<div>
+			<nav>
+	<div id="nav-l">
+	</div>
+	<div id="nav-c">
+		<ul id="nav-list" style="width: 700px;">
+			<li id="home"><a href="/">Home</a></li>
+			
+			
+			
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "About Me"><a href="/about.html">About Me</a></li>
+					
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Archive"><a href="/archive.html">Archive</a></li>
+					
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Categories"><a href="/categories.html">Categories</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+				
+			 
+				
+				  
+					
+					<li id = "Tags"><a href="/tags.html">Tags</a></li>
+					
+				  
+				
+			 
+				
+			 
+				
+			 
+				
+			 
+			
+			
+		</ul>
+		<form id="nav-search" method="GET" action="/search.html">
+			<div id="search-right-pix">
+				<div id="search-left-pix">
+					<div id="search-center-pix">
+						<div id="search-icon-pix"></div>
+						<input name="query" type="text" placeholder="Search">
+					</div>
+				</div>
+			</div>
+		</form>
+		
+		
+	</div>
+	<div id="nav-r">
+	</div>
+</nav>
+			<div id="page-content">
+				
+<div class="page-title-inline">
+	
+	<h1>Simpleyyt </h1>
+	<h2>Yitao's Blog</h2>
+	
 </div>
-    
-<div class="divider" id="section2"></div>
-  
-<section class="bg-1">
-  <div class="col-sm-6 col-sm-offset-3 text-center"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Try and Tweak Different Layouts</h2></div>
-</section>
-  
-<div class="divider"></div>
-   
-<div class="container" id="section3">
-  	<div class="col-sm-8 col-sm-offset-2 text-center">
-      <h1>Mobile-first + Responsive</h1>
-      
-      <p>
-      Instead of creating a unique version of the webpage for each desktop, mobile &amp; tablet, you can now create one design that works on all devices, browsers &amp; resolutions. Your designs will be future ready when a new table or phone size comes in the market, your designs will adapt itself and fit to the new screen size.
-      </p>
-      
-      <hr>
-      
-      <img src="/assets/example/bg_smartphones.jpg" class="img-responsive">
-      
-      <hr>
-  	</div><!--/col-->
-</div><!--/container-->
+<div class="cont932">
+	<hr style="margin-top: 0;">
+	<div id="journal-articles-block">
+	
+		<div class="journal-article">
+			<div class="journal-post-info">
+				
+				
+				<div class="journal-cat-box">
 
-<div class="divider"></div>
-  
-<section class="bg-3" id="section4">
-  <div class="col-sm-6 col-sm-offset-3 text-center"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Leverage Snippets &amp; Examples</h2></div>
-</section>
-  
-<div class="continer bg-4">
-	<div class="row">
-	   <div class="col-sm-4 col-xs-6">
-      
-        <div class="panel panel-default">
-          <div><img src="//placehold.it/620X250/565656/eee" class="img-responsive"></div>
-          <div class="panel-body">
-            <p class="lead">Hacker News</p>
-            <p>120k Followers, 900 Posts</p>
-            
-            <p>
-              <img src="https://lh4.googleusercontent.com/-9Yw2jNffJlE/AAAAAAAAAAI/AAAAAAAAAAA/u3WcFXvK-g8/s28-c-k-no/photo.jpg" width="28px" height="28px">
-            </p>
-          </div>
-        </div><!--/panel-->
-      </div><!--/col-->
-      
-      <div class="col-sm-4 col-xs-6">
-      
-      	<div class="panel panel-default">
-          <div class="panel-thumbnail"><img src="//placehold.it/620X250/ffcc33/444" class="img-responsive"></div>
-          <div class="panel-body">
-            <p class="lead">Bootstrap Templates</p>
-            <p>902 Followers, 88 Posts</p>
-            
-            <p>
-              <img src="https://lh5.googleusercontent.com/-AQznZjgfM3E/AAAAAAAAAAI/AAAAAAAAABA/WEPOnkQS_20/s28-c-k-no/photo.jpg" width="28px" height="28px">
-            </p>
-          </div>
-        </div><!--/panel--> 
-      </div><!--/col-->
-      
-      <div class="col-sm-4 col-xs-6">
-      
-      	<div class="panel panel-default">
-          <div class="panel-thumbnail"><img src="//placehold.it/620X250/f16251/444" class="img-responsive"></div>
-          <div class="panel-body">
-            <p class="lead">Social Media</p>
-            <p>19k Followers, 789 Posts</p>
-            
-            <p>
-              <img src="https://lh4.googleusercontent.com/-eSs1F2O7N1A/AAAAAAAAAAI/AAAAAAAAAAA/caHwQFv2RqI/s28-c-k-no/photo.jpg" width="28px" height="28px">
-              <img src="https://lh4.googleusercontent.com/-9Yw2jNffJlE/AAAAAAAAAAI/AAAAAAAAAAA/u3WcFXvK-g8/s28-c-k-no/photo.jpg" width="28px" height="28px">
-            </p>
-          </div>
-        </div><!--/panel--> 
+<a href="/categories.html#linux-ref" title="linux">
+	linux
 
-      </div><!--/col--> 
-	</div><!--/row-->
-</div><!--/container-->
-
-<div class="divider" id="section5"></div>
-
-<div class="row">
-
-  <h1 class="text-center">Where In The World?</h1>
-
-  <div id="map-canvas"></div>
-  
-  <hr>
-  
-  <div class="col-sm-8">
-      
-      <div class="row form-group">
-        <div class="col-xs-3">
-          <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required="">
-        </div>
-        <div class="col-xs-3">
-          <input type="text" class="form-control" id="middleName" name="firstName" placeholder="Middle Name" required="">
-        </div>
-        <div class="col-xs-4">
-          <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required="">
-        </div>
-      </div>
-      <div class="row form-group">
-          <div class="col-xs-5">
-          <input type="email" class="form-control" name="email" placeholder="Email" required="">
-          </div>
-          <div class="col-xs-5">
-          <input type="email" class="form-control" name="phone" placeholder="Phone" required="">
-          </div>
-      </div>
-      <div class="row form-group">
-          <div class="col-xs-10">
-          <input type="homepage" class="form-control" placeholder="Website URL" required="">
-          </div>
-      </div>
-      <div class="row form-group">
-          <div class="col-xs-10">
-            <button class="btn btn-default pull-right">Contact Us</button>
-          </div>
-      </div>
-    
-  </div>
-  <div class="col-sm-3 pull-right">
-
-      <address>
-        <strong>Iatek, LLC.</strong><br>
-        795 Folsom Ave, Suite 600<br>
-        Newport, RI 94107<br>
-        P: (123) 456-7890
-      </address>
-    
-      <address>
-        <strong>Email Us</strong><br>
-        <a href="mailto:#">first.last@example.com</a>
-      </address>          
-  </div>
-  
-</div><!--/row-->
-
-<div class="container">
-  	<div class="col-sm-8 col-sm-offset-2 text-center">
-      <h2>Beautiful Bootstrap Templates</h2>
-      
-      <hr>
-      <h4>
-        We love templates. We love Bootstrap.
-      </h4>
-      <p>Get more free templates like this at the <a href="http://bootply.com">Bootstrap Playground</a>, Bootply.</p>
-      <hr>
-      <ul class="list-inline center-block">
-        <li><a href="http://facebook.com/bootply"><img src="/assets/example/soc_fb.png"></a></li>
-        <li><a href="http://twitter.com/bootply"><img src="/assets/example/soc_tw.png"></a></li>
-        <li><a href="http://google.com/+bootply"><img src="/assets/example/soc_gplus.png"></a></li>
-        <li><a href="http://pinterest.com/in1"><img src="/assets/example/soc_pin.png"></a></li>
-      </ul>
-      
-  	</div><!--/col-->
-</div><!--/container-->
-  
-</div><!--/wrap-->
-
-<div id="footer">
-  <div class="container">
-    <p class="text-muted">This Bootstrap Example courtesy <a href="http://www.bootply.com">Bootply.com</a></p>
-  </div>
+</a>
 </div>
+				
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title"><a href="/linux/2014/10/30/6lowpan_on_linux">Linux-ZigBee项目：在Linux上运行6lowpan（一）</a><span class="author">by Snail</span></h1>
+				
+				<span class="teaser"><p>前段时间在看ZigBee的物理层和MAC层协议栈，也就是IEEE802.15.4协议。之后，发现sourceforge上有一个<a href="http://sourceforge.net/projects/linux-zigbee/">linux-zigbee</a>的项目，<a href="http://blog.chinaunix.net/uid-29653824-id-4351049.html">中文翻译介绍</a>。虽然这个项目叫Linux-ZigBee，但是因为许可问题除了IEEE802.15.4协议，其它的都没有实现，转而转向6lowpan，所以本文介绍一下用Ubuntu串口连接CC2530运行6lowpan。</p>
 
-<ul class="nav pull-right scroll-top">
-  <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
-</ul>
 
-	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
-		<script src="js/scripts.js"></script>
-	</body>
+				
+				</span>
+				<span class="readmore"><a href="/linux/2014/10/30/6lowpan_on_linux">Read More</a></span>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+		
+		<div class="journal-article">
+			<div class="journal-post-info">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#openwrt-ref" title="openwrt">
+	openwrt
+
+</a>
+</div>
+				
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title"><a href="/openwrt/2014/08/11/helloworld_on_openwrt">交叉编译OpenWrt上的Helloworld</a><span class="author">by Snail</span></h1>
+				
+				<span class="teaser"><p>终于编译完成了OpenWrt，并且成功交叉编译了Helloworld，并在Easy-Link的板子上运行。</p>
+
+
+				
+				</span>
+				<span class="readmore"><a href="/openwrt/2014/08/11/helloworld_on_openwrt">Read More</a></span>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+		
+		<div class="journal-article">
+			<div class="journal-post-info">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#openwrt-ref" title="openwrt">
+	openwrt
+
+</a>
+</div>
+				
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title"><a href="/openwrt/2014/08/11/error_on_compiling_openwrt">OpenWrt编译过程中出现的错误</a><span class="author">by Snail</span></h1>
+				
+				<span class="teaser"><p>编译OpenWrt不是件容易的事情，编译过程中要下载包，并且会出现很多奇怪的错误，经过几个小时的编译，终于成功了。</p>
+
+
+				
+				</span>
+				<span class="readmore"><a href="/openwrt/2014/08/11/error_on_compiling_openwrt">Read More</a></span>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+		
+		<div class="journal-article">
+			<div class="journal-post-info">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#openwrt-ref" title="openwrt">
+	openwrt
+
+</a>
+</div>
+				
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title"><a href="/openwrt/2014/08/10/compile_openwrt">OpenWrt的编译</a><span class="author">by Snail</span></h1>
+				
+				<span class="teaser"><p>最近在淘宝上买了基于AR9331的Easy-Link模块，尝试着编译了一下OpenWrt，编译环境为ubuntu 12.04。</p>
+
+
+				
+				</span>
+				<span class="readmore"><a href="/openwrt/2014/08/10/compile_openwrt">Read More</a></span>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+		
+		<div class="journal-article">
+			<div class="journal-post-info">
+				
+				
+				<div class="journal-cat-box">
+
+<a href="/categories.html#vocore-ref" title="vocore">
+	vocore
+
+</a>
+</div>
+				
+			</div>
+			<div class="journal-body">
+				<h1 class="journal-title"><a href="/vocore/2014/08/06/first_start_of_vocore">VoCore启动成功</a><span class="author">by Snail</span></h1>
+				
+				<span class="teaser"><p>换了个VoCore板之后，VoCore就能正常启动了，顺便测试了一下ssh和ap+sta模式。</p>
+
+
+				
+				</span>
+				<span class="readmore"><a href="/vocore/2014/08/06/first_start_of_vocore">Read More</a></span>
+			</div>
+		</div>
+		<div class="clearboth"></div>
+		
+	</div>
+	
+	<div id="journal-arrows-cont">
+			<a href="/2" class="journal-arrow ja-forward"></a>
+	</div>
+	
+	<div class="clearboth"></div>
+	<div id="journal-loadmore">Load More…</div>
+	<div class="clearboth"></div>
+</div>
+<div class="clearboth"></div>
+			</div>
+			<div class="clearboth pagebottom"></div>
+		</div>
+	</div>
+	<footer>
+	<div class="footer-940">
+		<div class="footer-general-info">
+			© 2014 Yitao Yao.<br><br>
+			Content licensed under:<br>
+			<a class="cc" href="http://creativecommons.org/licenses/by-sa/3.0/">c a b</a><br>
+			<a href = "/about.html">About Me</a><br>
+		</div>
+		<div class="footer-col-cont">
+			<div class="footer-nav-col">
+				<h4><a>Categories</a></h4>
+				<ul>
+					
+					
+
+
+  
+     
+    	<li><a href="/categories.html#android-ref">
+    		android <span>1</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#embedded-ref">
+    		embedded <span>2</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#linux-ref">
+    		linux <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#daily-ref">
+    		daily <span>4</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#vocore-ref">
+    		vocore <span>3</span>
+    	</a></li>
+     
+    	<li><a href="/categories.html#openwrt-ref">
+    		openwrt <span>3</span>
+    	</a></li>
+    
+  
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Pages</a></h4>
+				<ul>
+					
+					
+					
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/about.html">About Me</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Feed</a></h4>
+				<ul>
+					<li><a href="/atom.xml">Atom Feed</a></li>
+					<li><a href="/rss.xml">RSS Feed</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a>Links</a></h4>
+				<ul>
+				 
+					<li><a href = "http://simpleyyt.github.io/">Yitao's Blog</a></li>
+				
+				</ul>
+			</div>
+			<div class="footer-nav-col">
+				<h4><a href = "/about.html">About Me</a></h4>
+				<ul>
+				 
+					<li><a href = "mailto:simpleyyt@gmail.com">e-mail</a></li>
+				 
+					<li><a href = "https://github.com/Simpleyyt">Github</a></li>
+				 
+					<li><a href = "http://www.weibo.com/u/1836017133">WeiBo</a></li>
+				 
+					<li><a href = "https://plus.google.com/103860633659538888207?rel=author">Google+</a></li>
+				
+				</ul>
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="clearboth"></div>
+	</div>
+	<div class="clearboth"></div>
+</footer>
+	
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-123-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
 </html>
